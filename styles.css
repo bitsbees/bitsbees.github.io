@@ -35,7 +35,11 @@ body {
 
 .lowspace-card {
 	margin-bottom: 0px;
+}
 
+.person-card {
+	margin-left: 12px;
+	width: 600px;
 }
 
 .whitebg {
@@ -57,4 +61,40 @@ body {
 
 p {
 	text-align: justify;
+}
+
+.circular {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.circular img {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.people {
+	margin-left: 10px
+}
+
+.people .name {
+	font-size: 30px;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.people .designation {
+	color: #cccccc;
+}
+
+.people .about {
+
 }

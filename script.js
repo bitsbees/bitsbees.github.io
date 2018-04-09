@@ -22,12 +22,93 @@ var CARDS = [
 	}
 ];
 
+var PEOPLE = [
+	{
+		name: 'Gowtham',
+		designation: 'CEO',
+		about: 'good things',
+		image: './goli.jpg',
+		imgtop: '199px',
+		imgleft: '362px',
+		width: '550%'
+	},
+	{
+		name: 'Gaurav',
+		designation: 'employee',
+		about: 'good things',
+		image: './gaurav.jpg',
+		imgtop: '122px',
+		imgleft: '109px',
+		width: '100%'
+	}
+];
+
 //Load
 (function(){
+	loadshowcase();
+})();
+
+function loadpeople() {
+	var contentarea = $('#contentarea');
+	contentarea.empty();
+	contentarea.append(getPeople());
+}
+
+function loadshowcase() {
 	var contentarea = $('#contentarea');
 	contentarea.empty();
 	contentarea.append(getShowcase());
-})();
+}
+
+function getPeople() {
+	var people = $('<div>').addClass('row');
+
+	for (var person of PEOPLE) {
+		people.append(createPersonnelCard(person))
+	}
+	return people;
+}
+
+function createPersonnelCard(person) {
+	var card = $('<div>').addClass('col-md-12 card whitebg person-card');
+	var cardlayout = $('<div>').addClass('row');
+	card.append(cardlayout);
+
+	var image = $('<div>').addClass('col-md-5')
+	  	.append(
+			$('<div>').addClass('circular')
+					  .css({ float: 'left' })
+				.append(
+					$('<img>').attr('src', person.image)
+							  .css({
+								  top: person.imgtop,
+								  left: person.imgleft,
+								  width: person.width
+							  })
+				)
+	  	)
+	cardlayout.append(image);
+
+	var descriptionCol = $('<div>').addClass('col-md-7')
+	var description = $('<div>').addClass('people')
+	description.append(
+		$('<div>').addClass('name')
+				   .html(person.name)
+	)
+	description.append(
+		$('<div>').addClass('designation')
+				  .html(person.designation)
+	)
+
+	description.append(
+		$('<div>').addClass('about')
+				  .html(person.about)
+	)
+	descriptionCol.append(description);
+
+	cardlayout.append(descriptionCol);
+	return card;
+}
 
 function getShowcase() {
 	var flexbox = $('<div>').addClass('flexbox');
