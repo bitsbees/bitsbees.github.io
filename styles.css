@@ -29,7 +29,7 @@ body {
 }
 
 .showcase-card {
-	min-width: 250px;
+	width: 250px;
 	min-height: 350px;
 }
 
@@ -45,4 +45,16 @@ body {
 .flexbox {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.button {
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #6898f1;
+}
+
+p {
+	text-align: justify;
 }
