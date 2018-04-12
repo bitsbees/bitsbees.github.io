@@ -34,8 +34,8 @@ var PEOPLE = [
 	},
 	{
 		name: 'Gaurav',
-		designation: 'employee',
-		about: 'good things',
+		designation: 'CTO',
+		about: 'I am a full stack developer and I have made the NeuroCONCISE cloud, mobile and web infrastructure.',
 		image: './gaurav.jpg',
 		imgtop: '122px',
 		imgleft: '109px',
